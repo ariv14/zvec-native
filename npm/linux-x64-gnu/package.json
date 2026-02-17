@@ -1,14 +1,24 @@
 {
   "name": "@moltmind/zvec-native-linux-x64-gnu",
   "version": "0.1.0",
-  "os": ["linux"],
-  "cpu": ["x64"],
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
   "main": "zvec-native.linux-x64-gnu.node",
-  "files": ["zvec-native.linux-x64-gnu.node"],
+  "files": [
+    "zvec-native.linux-x64-gnu.node"
+  ],
   "description": "HNSW native addon for MoltMind (Linux x64)",
-  "libc": ["glibc"],
+  "libc": [
+    "glibc"
+  ],
   "license": "MIT",
-  "engines": { "node": ">= 18" },
+  "engines": {
+    "node": ">= 18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ariv14/zvec-native.git"

@@ -38,10 +38,10 @@
     "node": ">= 18"
   },
   "optionalDependencies": {
-    "@moltmind/zvec-native-win32-x64-msvc": "0.1.0",
     "@moltmind/zvec-native-darwin-x64": "0.1.0",
     "@moltmind/zvec-native-darwin-arm64": "0.1.0",
     "@moltmind/zvec-native-linux-x64-gnu": "0.1.0",
-    "@moltmind/zvec-native-linux-arm64-gnu": "0.1.0"
+    "@moltmind/zvec-native-linux-arm64-gnu": "0.1.0",
+    "@moltmind/zvec-native-win32-x64-msvc": "0.1.0"
   }
 }
