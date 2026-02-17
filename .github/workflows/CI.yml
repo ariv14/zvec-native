@@ -86,15 +86,19 @@ jobs:
           path: artifacts
       - run: npm install
       - run: npx napi artifacts --output-dir artifacts
-      - run: npx napi prepublish -t npm
-      - run: |
-          npm publish --access public
+      - name: Publish platform packages
+        run: |
           for dir in npm/*/; do
-            if [ -f "$dir/package.json" ]; then
+            if [ -f "$dir/package.json" ] && ls "$dir"/*.node 1>/dev/null 2>&1; then
+              echo "Publishing $dir"
               cd "$dir"
               npm publish --access public || true
               cd ../..
             fi
           done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish root package
+        run: npm publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
