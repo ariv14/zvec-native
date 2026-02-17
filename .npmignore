@@ -1,0 +1,11 @@
+target/
+src/
+tests/
+Cargo.toml
+Cargo.lock
+build.rs
+.github/
+npm/
+*.node
+rustfmt.toml
+.cargo/

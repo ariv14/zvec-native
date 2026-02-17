@@ -1,0 +1,15 @@
+{
+  "name": "@moltmind/zvec-native-win32-x64-msvc",
+  "version": "0.1.0",
+  "os": ["win32"],
+  "cpu": ["x64"],
+  "main": "zvec-native.win32-x64-msvc.node",
+  "files": ["zvec-native.win32-x64-msvc.node"],
+  "description": "HNSW native addon for MoltMind (Windows x64)",
+  "license": "MIT",
+  "engines": { "node": ">= 18" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariv14/zvec-native.git"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@moltmind/zvec-native-darwin-x64",
+  "version": "0.1.0",
+  "os": ["darwin"],
+  "cpu": ["x64"],
+  "main": "zvec-native.darwin-x64.node",
+  "files": ["zvec-native.darwin-x64.node"],
+  "description": "HNSW native addon for MoltMind (macOS x64)",
+  "license": "MIT",
+  "engines": { "node": ">= 18" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariv14/zvec-native.git"
+  }
+}
