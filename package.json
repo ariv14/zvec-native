@@ -1,6 +1,6 @@
 {
   "name": "@moltmind/zvec-native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HNSW approximate nearest neighbor search — native addon for MoltMind",
   "main": "index.js",
   "types": "index.d.ts",
@@ -38,10 +38,10 @@
     "node": ">= 18"
   },
   "optionalDependencies": {
-    "@moltmind/zvec-native-darwin-x64": "0.1.0",
-    "@moltmind/zvec-native-darwin-arm64": "0.1.0",
-    "@moltmind/zvec-native-linux-x64-gnu": "0.1.0",
-    "@moltmind/zvec-native-linux-arm64-gnu": "0.1.0",
-    "@moltmind/zvec-native-win32-x64-msvc": "0.1.0"
+    "@moltmind/zvec-native-darwin-x64": "0.1.1",
+    "@moltmind/zvec-native-darwin-arm64": "0.1.1",
+    "@moltmind/zvec-native-linux-x64-gnu": "0.1.1",
+    "@moltmind/zvec-native-linux-arm64-gnu": "0.1.1",
+    "@moltmind/zvec-native-win32-x64-msvc": "0.1.1"
   }
 }
