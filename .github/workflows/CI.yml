@@ -85,7 +85,7 @@ jobs:
         with:
           path: artifacts
       - run: npm install
-      - run: npx napi artifacts --dir artifacts
+      - run: npx napi artifacts --output-dir artifacts
       - run: npx napi prepublish -t npm
       - run: |
           npm publish --access public
