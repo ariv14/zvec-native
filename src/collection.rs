@@ -86,8 +86,8 @@ impl Collection {
         self.dirty = true;
     }
 
-    pub fn search_vectors(&self, query: &[f32], k: usize) -> Vec<(String, f32)> {
-        let ef = std::cmp::max(k * 2, 50);
+    pub fn search_vectors(&self, query: &[f32], k: usize, ef_search: usize) -> Vec<(String, f32)> {
+        let ef = std::cmp::max(ef_search, k);
         let results = self.hnsw.search(query, k + self.deleted_ids.len(), ef);
 
         let mut output: Vec<(String, f32)> = Vec::new();

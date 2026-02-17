@@ -21,7 +21,7 @@ export declare function deleteVector(path: string, id: string): boolean
 
 export declare function insertVector(path: string, id: string, vector: Float32Array): void
 
-export declare function search(path: string, query: Float32Array, k: number): Array<SearchResult>
+export declare function search(path: string, query: Float32Array, k: number, efSearch?: number | undefined | null): Array<SearchResult>
 
 export interface SearchResult {
   id: string

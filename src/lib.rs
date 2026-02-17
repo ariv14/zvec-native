@@ -149,7 +149,12 @@ pub fn build_index(path: String) -> Result<()> {
 }
 
 #[napi]
-pub fn search(path: String, query: Float32Array, k: u32) -> Result<Vec<SearchResult>> {
+pub fn search(
+    path: String,
+    query: Float32Array,
+    k: u32,
+    ef_search: Option<u32>,
+) -> Result<Vec<SearchResult>> {
     let collections = COLLECTIONS
         .read()
         .map_err(|e| Error::from_reason(format!("Lock error: {}", e)))?;
@@ -170,7 +175,12 @@ pub fn search(path: String, query: Float32Array, k: u32) -> Result<Vec<SearchRes
         return Ok(Vec::new());
     }
 
-    let results = coll.search_vectors(query.as_ref(), k as usize);
+    // Default ef_search = max(k * 10, 200) — high enough for good recall at scale
+    let ef = ef_search
+        .map(|v| v as usize)
+        .unwrap_or_else(|| std::cmp::max((k as usize) * 10, 200));
+
+    let results = coll.search_vectors(query.as_ref(), k as usize, ef);
 
     Ok(results
         .into_iter()
